@@ -192,6 +192,8 @@ hr{
 #navigation {
   display: block;
   height: 42px;
+  max-width: 1200px;
+  margin: auto;
 }
 #content {
   min-height: 100%;
