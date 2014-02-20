@@ -67,6 +67,7 @@
     });
     return $(".carousel").owlCarousel({
       navigation: true,
+      lazyLoad: true,
       navigationText: ["&larr;", "&rarr;"],
       slideSpeed: 300,
       paginationSpeed: 400,
