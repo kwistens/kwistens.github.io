@@ -213,21 +213,6 @@ a:visited {
 #navigation .active * {
   color: #Ef4823!important
 }
-/*#navigation .menu-item.off-left {*/
-  /*left: -33.33%;*/
-/*}*/
-/*#navigation .menu-item.previous {*/
-  /*left: 0;*/
-/*}*/
-/*#navigation .menu-item.active {*/
-  /*left: 33.33%;*/
-/*}*/
-/*#navigation .menu-item.next {*/
-  /*left: 66.66%;*/
-/*}*/
-/*#navigation .menu-item.off-right {*/
-  /*left: 100%;*/
-/*}*/
 #content .page {
   top: 0;
   width: 78%;

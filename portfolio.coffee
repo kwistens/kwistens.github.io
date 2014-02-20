@@ -1,7 +1,3 @@
-# !Initialize
-easing = "easeInOutCubic"
-highest_page = 0
-
 trans = (func) ->
     off_left = $("#content .page.off-left").add("#navigation .menu-item.off-left")
     previous = $("#content .page.previous").add("#navigation .menu-item.previous")
@@ -11,7 +7,6 @@ trans = (func) ->
     func off_left, previous, active, next, off_right
 
 $(document).ready ->
-
   $(".page.active").find(".page-number").show()
 
   $("body").on "click", ".off-left", (event) ->
