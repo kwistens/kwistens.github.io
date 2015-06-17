@@ -1,0 +1,9 @@
+{
+  "name": "kwistens.github.io",
+  "version": "1.0.0",
+  "description": "kwistens.github.io",
+  "devDependencies": {
+    "cssnext": "^1.8.3"
+  },
+  "author": "Kristen Leach"
+}

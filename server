@@ -1,0 +1,18 @@
+#!/bin/sh
+set -e
+cssnext="./node_modules/.bin/cssnext"
+if [[ ! -f "$cssnext" ]]; then
+    echo "Installing cssnext..."
+    npm install
+fi
+
+if [[ ! $(which jekyll) ]]; then
+    echo "Installing jekyll..."
+    gem install jekyll
+fi
+
+./node_modules/.bin/cssnext --verbose _css/style.css css/out.css
+./node_modules/.bin/cssnext --verbose --watch _css/style.css css/out.css &
+jekyll serve
+
+wait

@@ -1,0 +1,10 @@
+# Site settings
+title: Kristen Leach
+email: kristen@kristenleach.com
+description: >
+  Kristen Leach
+baseurl: ""
+url: "http://www.kristenleach.com"
+
+# Build settings
+markdown: kramdown

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/images/favicon.png">
+
+    <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+    <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+    <link rel="stylesheet" href="/css/out.css">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+  </head>
+  <body>
+    <link rel="stylesheet" type="text/css" href="http://cloud.typography.com/7520554/639208/css/fonts.css">
+    <div id="header" class="flex-row">
+      <header class="flex-row">
+        <a href="/"><h1 id="title">Kristen Leach</h1></a>
+        <p class="subtitle">designer, sunshine-seeker</p>
+      </header>
+      <ul id="navigation" class="flex-row">
+        <li class="menu-item{% if page.selected == "work" %} selected{% endif %}">
+          <a href="/">Work</a>
+        </li>
+        <li class="menu-item{% if page.selected == "play" %} selected{% endif %}">
+          <a href="/play">Play</a>
+        </li>
+        <li class="menu-item{% if page.selected == "about" %} selected{% endif %}">
+          <a href="/about">About</a>
+        </li>
+      </ul>
+    </div>
+    <div class="page-content {{ page.type }}">
+      {{ content }}
+    </div>
+    {% if page.sub %}
+    <footer>
+      <div class="breadcrumbs">
+        <a href="{{ page.back }}">&laquo; Back to {{ page.sub }}</a>
+      </div>
+    </footer>
+    {% endif %}
+    <link rel="stylesheet" href="/vendor/baguetteBox-1.4.0/baguetteBox.min.css">
+    <script type="text/javascript" src="/vendor/baguetteBox-1.4.0/baguetteBox.min.js"></script>
+    <script type="text/javascript" src="/js/js.js"></script>
+    <script>
+     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                              m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+     ga('create', 'UA-48256985-1', 'auto');
+     ga('send', 'pageview');
+    </script>
+  </body>
+</html>
